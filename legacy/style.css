@@ -1,0 +1,66 @@
+:root {
+    --primary: #6062f6;
+    --background-dark: #101022;
+    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.glass {
+    background: rgba(16, 16, 34, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(96, 98, 246, 0.1);
+}
+
+.hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(96, 98, 246, 0.15) 0%, rgba(16, 16, 34, 0) 70%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.hover-card {
+    transition: var(--transition);
+}
+
+.hover-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(96, 98, 246, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Typewriter Visibility */
+.typewriter {
+    visibility: hidden;
+}
+
+/* Layout Adjustments */
+body {
+    overflow-x: hidden;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
